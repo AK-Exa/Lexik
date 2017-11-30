@@ -2,11 +2,12 @@
     "name": "Lexik",
     "licence": "MIT",
     "type": "project",
-    "description": "test recrutement php",
+    "description": "Test php",
     "autoload": {
         "psr-0" :{"" : "src/"}
     },
     "require":{
-        "gabordemooij/redbean" : "dev-master"
+        "gabordemooij/redbean" : "dev-master",
+        "nibble/nibble-forms" : "dev-master"
     }
 }

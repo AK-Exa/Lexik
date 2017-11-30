@@ -1,0 +1,49 @@
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous" rel="stylesheet">
+    <link href="http://localhost/Lexik/web/css/lexik.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-header">
+                <h3 class="text-muted">Lexik test PHP</h3>
+            </div>
+            {{ getMenu() }}
+        </nav>
+    </div>
+    <div class="content col-12">
+        <div align="right"><a href="app.php?controller=user&action=add" class="btn btn-success">Créer un nouvel utilisateur</a></div>
+        <table id="luser" class="table table-striped" cellspacing="0">
+            <thead>
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="search" placeholder="Tapez votre recherche...">
+                    <button class="btn" id="annuleSearch">Annuler la recherche</button>
+                </td>
+            </tr>
+            <tr>
+                <th class="text-center">
+                    <a id="delAll" type="button" class="btn btn-info" style="margin: 0 0 5 0">Effacer Tout</a><br>
+                    <input type="checkbox" id="checkAll">
+                </th>
+                <th class="text-center">Groupe</th>
+                <th class="text-center">Nom Prénom</th>
+                <th class="text-center">Email</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {{ getList(user) }}
+            </tbody>
+        </table>
+    </div>
+</div><!-- end #container -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://localhost/Lexik/web/js/lexik.js"></script>
+</body>
+</html>
